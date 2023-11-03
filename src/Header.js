@@ -11,7 +11,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={logo} alt="Logo" />
+          <img className="logo" src={logo} alt="Logo" />
         </a>
       </header>
     </div>
