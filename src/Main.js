@@ -42,6 +42,7 @@ export default function Main({ props }) {
             <a
               href={`${url}`}
               target="_blank"
+              rel="noopener noreferrer"
               onClick={() => handleFetchUrl(el.freetogame_profile_url)}
             >
               <img src={`${el.thumbnail}`} alt="game" data-aos="fade-out"></img>
