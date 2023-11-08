@@ -13,6 +13,7 @@ export default function Header() {
         >
           <img className="logo" src={logo} alt="Logo" />
         </a>
+        <span className="header-span">Free Games</span>
       </header>
     </div>
   );
