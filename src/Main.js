@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { FaWindows } from "react-icons/fa";
+import { IoBrowsers } from "react-icons/io5";
 export default function Main({ props }) {
   //get profile url by freetogame_profile_url
   const [url, setUrls] = useState("");
@@ -8,7 +9,7 @@ export default function Main({ props }) {
     setUrls(getUrl);
     console.log(getUrl);
   }
-
+  
   // // get id to fetch individual game data by id
   // const [id, setId] = useState(null);
   // const [data, setData] = useState([]);
@@ -48,21 +49,35 @@ export default function Main({ props }) {
               </div>
               <div className="card-body">
                 <div>
-                  <p>{el.short_description}</p>
+                  <p className="short-description">{el.short_description}</p>
                 </div>
 
                 <div className="platform">
                   <div>
-                   
-                    <p>{el.genre}</p>
+                    <p className="platform-header">
+                      <span className="text-span">Genre</span>
+                    </p>
+                    <p className="badge">
+                      <span>{el.genre}</span>
+                    </p>
                   </div>
 
                   <div>
-                    
-                    <p>{el.platform}</p>
+                    <p className="platform-header">
+                      <span className="text-span">Platform</span>
+                    </p>
+                    <p style={{ color: "white" }}>
+                      {el.platform === "PC (Windows)" ? (
+                        <FaWindows />
+                      ) : (
+                        <IoBrowsers />
+                      )}
+                    </p>
                   </div>
                   <div>
-                    
+                    <p className="platform-header">
+                      <span className="text-span">Developer</span>
+                    </p>
                     <p>{el.developer}</p>
                   </div>
                 </div>

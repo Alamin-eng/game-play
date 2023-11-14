@@ -36,7 +36,7 @@ function App() {
       <Carousel className="caro">
         <Carousel.Item interval={4000}>
           <video autoPlay loop muted className="caroitem">
-            <source src={video} type="video/mp4" />
+            <source src={video} type="video/webm" />
           </video>
         </Carousel.Item>
         <Carousel.Item interval={4000}>
@@ -46,7 +46,7 @@ function App() {
         </Carousel.Item>
         <Carousel.Item interval={4000}>
           <video autoPlay loop muted className="caroitem">
-            <source src={video2} type="video/webm" />
+            <source src={video2} type="video/mp4" />
           </video>
         </Carousel.Item>
       </Carousel>
