@@ -48,10 +48,24 @@ export default function Main({ props }) {
                 ></img>
               </div>
               <div className="card-body">
-                <div>
-                  <p className="short-description">{el.short_description}</p>
+                <div className="title-platform">
+                  <div>
+                    <p className="platform-header">
+                      <span className="text-span">Title</span>
+                    </p>
+                    <p>{el.title}</p>
+                  </div>
+                  <div>
+                    <p className="platform-header">
+                      <span className="text-span">Release date</span>
+                    </p>
+                    <p>{el.release_date}</p>
+                  </div>
                 </div>
 
+                <div className="short-description">
+                  <p>{el.short_description}</p>
+                </div>
                 <div className="platform">
                   <div>
                     <p className="platform-header">
@@ -81,6 +95,7 @@ export default function Main({ props }) {
                     <p>{el.developer}</p>
                   </div>
                 </div>
+
                 <div>
                   <a
                     className="main-play"
@@ -88,7 +103,7 @@ export default function Main({ props }) {
                     href={`${url}`}
                     target="_blank"
                     rel="noopener noreferrer" // NOTICE rel VALUES SET FOR SECURITY REASON
-                    onClick={() => handleFetchUrl(el.freetogame_profile_url)}
+                    onClick={() => handleFetchUrl(el.game_url)}
                   >
                     PLAY
                   </a>
