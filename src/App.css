@@ -71,17 +71,31 @@
 .card-body {
   position: inherit;
   display: grid;
-  grid-template-rows: calc(50px + 5px) calc(115px + 10px) calc(75px + 5px) 40px;
+  grid-template-rows: calc(52px + 5px) calc(115px + 10px) calc(75px + 5px) 40px;
   gap: calc(4px + 2px);
 }
 
 .title-platform{
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 40px;
   color: var(--color1);
   font-size: calc(1rem - 0.2rem);
+  gap:calc(5px + 1px)
+}
+.free-div{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: calc(45px + 3px);
+  height: calc(21px + 2px);
+  background-color: rgb(207, 90, 0);
+  color: white;
+  border-radius: calc(8px + 2px);
+  font-weight: bold;
+  font-size: calc(.9rem - .1rem);
+  letter-spacing: 1.5px;
+  margin-top: calc(3px + 1px);
 }
 .short-description{
   border-bottom: 1px solid var(--card-border);

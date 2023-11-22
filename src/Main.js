@@ -57,9 +57,12 @@ export default function Main({ props }) {
                   </div>
                   <div>
                     <p className="platform-header">
-                      <span className="text-span">Release date</span>
+                      <span className="text-span">Release</span>
                     </p>
-                    <p>{el.release_date}</p>
+                    <p>{el.release_date ? el.release_date.split("-").reverse().join("/") : "No date"}</p>
+                  </div>
+                  <div className="free-div">
+                    <div>Free</div>
                   </div>
                 </div>
 
