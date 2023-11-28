@@ -5,10 +5,11 @@
   --card-border: rgb(81, 68, 64);
   --span: rgb(139, 139, 139);
   --background: rgb(34, 32, 32, 0.8);
+  --header-main-color:rgb(168, 2, 138);
 }
 .header-container {
   display: grid;
-  grid-template-columns: 0.75fr 1fr 1fr;
+  grid-template-columns: 0.75fr 1fr;
   justify-content: center;
   align-items: center;
   padding: 2px 5%;
@@ -21,7 +22,7 @@
 .header-span {
   font-family: "Exo 2", sans-serif;
   margin-left: 1%;
-  color: rgb(168, 2, 138);
+  color: var(--header-main-color);
   font-weight: bold;
   font-size: calc(1.25rem);
 }
@@ -196,7 +197,7 @@ select {
 }
 
 /* hamburger menu  */
-.hamburger-menu {
+.hamburger-menu{
   display: none;
   cursor:pointer;
   position: absolute;
@@ -212,9 +213,14 @@ select {
 }
 
 .hamburger-menu:hover {
-  color: #95a3ff; /* Change color on hover as desired */
+  color: var(--header-main-color); /* Change color on hover as desired */
 }
 @media only screen and (max-width: 980px) {
+  .header-container {
+  display: grid;
+  grid-template-columns: 1.75fr .25fr;
+  padding: 4%;
+  }
   .main {
     margin-top: 75vh;
     position: relative;
@@ -241,8 +247,8 @@ select {
   /* Dropdown Styles */
   .dropdown {
     display: none;
-    position: fixed;
-    top: 70px; 
+    position: absolute;
+    top: 80px; 
     right: 1px; 
     background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
