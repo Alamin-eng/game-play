@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 // import axios from "axios";
 import Header from './Header';
@@ -6,6 +6,7 @@ import Main from './Main';
 import Carousel from "react-bootstrap/Carousel";
 import AOS from "aos";
 import 'aos/dist/aos.css';
+import ResponsiveDropdown from './responsive-dropdown';
 
 function App() {
   const video = require("./v2.webm");
@@ -30,9 +31,27 @@ function App() {
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
+
+   const [selectPlatform, setSelectPlatform] = useState("Platform");
+   const [selectGenre, setSelectGenre] = useState("Genre");
+   function handleSelectPlatform(e) {
+     setSelectPlatform(e.target.value);
+   }
+   
+   function handleSelectGenre(e) {
+     setSelectGenre(e.target.value);
+   }
   return (
     <div>
-      <Header />
+      <div className="header-container">
+        <Header />
+        <ResponsiveDropdown
+          selectPlatform={selectPlatform}
+          setSelectPlatform={handleSelectPlatform}
+          selectGenre={selectGenre}
+          setSelectGenre={handleSelectGenre}
+        />
+      </div>
       <Carousel className="caro">
         <Carousel.Item interval={7000}>
           <video autoPlay loop muted className="caroitem">
@@ -51,7 +70,7 @@ function App() {
         </Carousel.Item>
       </Carousel>
 
-      <Main props={staticData} />
+      <Main props={staticData} selectPlatform={selectPlatform} selectGenre={selectGenre}/>
     </div>
   );
 }

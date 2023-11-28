@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FaWindows } from "react-icons/fa";
 import { IoBrowsers } from "react-icons/io5";
-export default function Main({ props }) {
+
+export default function Main({ props, selectPlatform, selectGenre }) {
   //get profile url by freetogame_profile_url
   const [url, setUrls] = useState("");
 
@@ -9,7 +10,7 @@ export default function Main({ props }) {
     setUrls(getUrl);
     console.log(getUrl);
   }
-  
+
   // // get id to fetch individual game data by id
   // const [id, setId] = useState(null);
   // const [data, setData] = useState([]);
@@ -33,10 +34,16 @@ export default function Main({ props }) {
   //   setId(getId);
   //   console.log(getId);
   // }
+  
+  const dataManupulation = props
+  .filter((item) => selectPlatform === "Platform" || selectPlatform === item.platform)
+  .filter((item) => selectGenre === "Genre" || selectGenre === item.genre)
 
+  
   return (
     <div className="main">
-      {props.map((el, index) => {
+      
+      {dataManupulation.map((el, index) => {
         return (
           <div className="main-card" key={index}>
             <div data-aos="zoom-in">
@@ -59,7 +66,11 @@ export default function Main({ props }) {
                     <p className="platform-header">
                       <span className="text-span">Release</span>
                     </p>
-                    <p>{el.release_date ? el.release_date.split("-").reverse().join("/") : "No date"}</p>
+                    <p>
+                      {el.release_date
+                        ? el.release_date.split("-").reverse().join("/")
+                        : "No date"}
+                    </p>
                   </div>
                   <div className="free-div">
                     <div>Free</div>
