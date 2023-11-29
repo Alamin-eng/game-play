@@ -34,6 +34,7 @@ function App() {
 
    const [selectPlatform, setSelectPlatform] = useState("Platform");
    const [selectGenre, setSelectGenre] = useState("Genre");
+   
    function handleSelectPlatform(e) {
      setSelectPlatform(e.target.value);
    }

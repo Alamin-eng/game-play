@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaHome } from "react-icons/fa";
 import "./App.css";
 
 export default function ResponsiveDropdown({
@@ -10,7 +11,7 @@ export default function ResponsiveDropdown({
   const [menuActive, setMenuActive] = useState(false);
 
   return (
-    <div>
+    <div id="dropdownId">
       <div
         className={`hamburger-menu ${menuActive ? "active" : ""}`}
         onClick={() => setMenuActive(!menuActive)}
@@ -18,10 +19,18 @@ export default function ResponsiveDropdown({
         &#9776;
       </div>
       <div className={`dropdown ${menuActive ? "active" : ""}`}>
+        <a
+          className="home"
+          href="dropdownId"
+          style={{ textDecoration: "none" }}
+        >
+          <FaHome style={{ color: "white", textDecoration: "none" }} />
+          <span>Home</span>
+        </a>
         <div className="genre">
           <label>Genre</label>
           <select onChange={(e) => setSelectGenre(e)} value={selectGenre}>
-            <option value="Genre">All genre</option>
+            <option value="Genre">Select genre</option>
             <option value="MMOARPG">MMOARPG</option>
             <option value="Shooter">Shooter</option>
             <option value="ARPG">ARPG</option>

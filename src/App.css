@@ -9,7 +9,7 @@
 }
 .header-container {
   display: grid;
-  grid-template-columns: 0.75fr 1fr;
+  grid-template-columns: 0.75fr 1.5fr;
   justify-content: center;
   align-items: center;
   padding: 2px 5%;
@@ -27,6 +27,13 @@
   font-size: calc(1.25rem);
 }
 /* dropdown */
+.home{
+  gap: 10px;
+  
+}
+.home:hover{
+  color: white;
+}
 .dropdown {
   display: flex;
   gap: 50px;
@@ -35,7 +42,7 @@
 }
 
 .platform > label,
-.genre > label {
+.genre > label, .home {
   display: inline-flex;
   justify-content: center;
   align-items: center;
