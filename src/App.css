@@ -27,11 +27,10 @@
   font-size: calc(1.25rem);
 }
 /* dropdown */
-.home{
+.home {
   gap: 10px;
-  
 }
-.home:hover{
+.home:hover {
   color: white;
 }
 .dropdown {
@@ -42,7 +41,8 @@
 }
 
 .platform > label,
-.genre > label, .home {
+.genre > label,
+.home {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +89,7 @@ select {
   top: 6%;
   left: 0;
   width: 100%;
-  height: 99%;
+  height: 98%;
   background: linear-gradient(
     90deg,
     rgb(34, 32, 32),
@@ -97,12 +97,12 @@ select {
     rgb(34, 32, 32)
   );
   opacity: 0.3;
-  border-radius: calc(30% + 5%);
+  border-radius: calc(2.5% + 2.5%);
 }
-.carousel-control-next,
+/* .carousel-control-next,
 .carousel-control-prev {
   display: none;
-}
+} */
 /* main */
 .main {
   margin-top: 90vh;
@@ -270,5 +270,9 @@ select {
   .dropdown select {
     display: block;
     margin: 5px;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: none;
   }
 }

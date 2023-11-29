@@ -5,7 +5,7 @@ export default function Header() {
  
   return (
     <header className="App-header" id="logo">
-      <a href="logo">
+      <a href="#">
         <img className="logo" src={logo} alt="Logo" />
       </a>
       <span className="header-span">Free Games</span>

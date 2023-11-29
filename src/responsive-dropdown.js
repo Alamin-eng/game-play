@@ -21,8 +21,9 @@ export default function ResponsiveDropdown({
       <div className={`dropdown ${menuActive ? "active" : ""}`}>
         <a
           className="home"
-          href="dropdownId"
+          href="#"
           style={{ textDecoration: "none" }}
+          onClick={() => setMenuActive(false)}
         >
           <FaHome style={{ color: "white", textDecoration: "none" }} />
           <span>Home</span>
