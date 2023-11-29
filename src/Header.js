@@ -5,7 +5,7 @@ export default function Header() {
  
   return (
     <header className="App-header" id="logo">
-      <a href="#">
+      <a href="https://game-play-mohammad-alamin.netlify.app/">
         <img className="logo" src={logo} alt="Logo" />
       </a>
       <span className="header-span">Free Games</span>

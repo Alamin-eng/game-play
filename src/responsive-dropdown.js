@@ -21,7 +21,7 @@ export default function ResponsiveDropdown({
       <div className={`dropdown ${menuActive ? "active" : ""}`}>
         <a
           className="home"
-          href="#"
+          href="https://game-play-mohammad-alamin.netlify.app/"
           style={{ textDecoration: "none" }}
           onClick={() => setMenuActive(false)}
         >
