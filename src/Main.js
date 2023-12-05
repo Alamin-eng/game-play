@@ -112,7 +112,7 @@ export default function Main({ props, selectPlatform, selectGenre }) {
 
                 <div>
                   <a
-                    className="main-play"
+                    className="main-play blue-btn"
                     style={{ textDecoration: "none", color: "white" }}
                     href={`${url}`}
                     target="_blank"
