@@ -12,7 +12,7 @@
   grid-template-columns: 0.75fr 1.5fr;
   justify-content: center;
   align-items: center;
-  padding: 2px 5%;
+  padding: calc(10px - 3px) 4%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -67,29 +67,29 @@ select {
 /* video clips carousel */
 .carousel {
   position: absolute;
-  top: 6%;
+  top: 7%;
   left: 0;
-  padding-top: 5%;
+  padding-top: 4%;
   border-radius: 50%;
 }
 .logo {
   height: auto;
-  width: calc(4rem);
+  width: calc(4rem - .5rem);
 }
 .carousel-item > video {
-  width: 99vw;
-  height: 500px;
-  padding: 0 2%;
-  margin-left: 3px;
+  width: 97vw;
+  height: calc(440px + 50px);
+  padding: 0 1%;
+  margin-left: 4px;
 }
 .carousel::after {
   content: "";
   display: block;
   position: absolute;
-  top: 6%;
+  top: 5%;
   left: 0;
   width: 100%;
-  height: 98%;
+  height: calc(93% + 5%);
   background: linear-gradient(
     90deg,
     rgb(34, 32, 32),
@@ -115,6 +115,7 @@ select {
 .card-img > img {
   height: auto;
   width: calc(100%);
+  border-radius: 4px 4px 0 0;
 }
 .main-card {
   border: 1px solid var(--card-border);
@@ -229,7 +230,7 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(46, 46, 46, 0.5);
+    /* background-color: rgba(46, 46, 46, 0.5); */
     margin: 1px 0;
     position: relative;
     top: 5%;
@@ -250,29 +251,43 @@ select {
     color: var(--color1);
   }
 
+  .home {
+    background-color: var(--background);
+    width: 100%;
+    height: 5vh;
+  }
   /* Dropdown Styles */
   .dropdown {
     display: none;
     position: absolute;
     top: 80px;
     right: 1px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(1, 57, 87, 0.75);
     width: 100%;
-    height: 60vh;
+    height: 65vh;
     z-index: 10;
   }
   /* notice how .dropdown.active class used to display .dropdown style above in @media rules */
   .dropdown.active {
     display: block;
-    padding: 10px;
+    padding: 40px;
   }
   .dropdown label,
   .dropdown select {
     display: block;
-    margin: 5px;
+    margin: 15px;
   }
   .carousel-control-next,
   .carousel-control-prev {
     display: none;
   }
+  /* carousel  */
+  .carousel {
+  top: 2%;
+  }
+  .carousel::after {
+    top: 20%;
+    height: 60%;
+  }
+
 }

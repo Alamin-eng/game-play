@@ -1,4 +1,5 @@
-/* this Dropdown component is not used in App.js, ResponsiveDropdown component is used instead */
+
+/* this Dropdown component is NOT USED in App.js, ResponsiveDropdown component is used instead */
 import React from "react";
 import "./App.css";
 
