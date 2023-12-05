@@ -275,7 +275,7 @@ select {
     padding: 4%;
   }
   .main {
-    margin-top: 60vh;
+    margin-top: 58vh;
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
@@ -289,8 +289,11 @@ select {
     background-color: rgba(46, 46, 46, 0.5);
     margin: 5px 0;
     position: relative;
+    
   }
-
+.platform>label, .genre>label{
+  color: white;
+}
   /* responsive dropdown */
   .hamburger-menu {
     display: block;
@@ -325,12 +328,12 @@ select {
   /* notice how .dropdown.active class used to display .dropdown style above in @media rules */
   .dropdown.active {
     display: block;
-    padding: 40px;
+    padding: 30px;
   }
   .dropdown label,
   .dropdown select {
     display: block;
-    margin: 15px;
+    margin: calc(13px + 2px);
   }
   .carousel-control-next,
   .carousel-control-prev {
