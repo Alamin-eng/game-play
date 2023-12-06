@@ -80,7 +80,7 @@ export default function Main({ props, selectPlatform, selectGenre }) {
                 <div className="short-description">
                   <p>{el.short_description}</p>
                 </div>
-                <div className="platform">
+                <div className="mains-platform">
                   <div>
                     <p className="platform-header">
                       <span className="text-span">Genre</span>
