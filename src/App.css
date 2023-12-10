@@ -266,9 +266,7 @@ select {
 .hamburger-menu {
   display: none;
 }
-.hamburger-menu:hover {
-  color: var(--header-main-color); /* Change color on hover as desired */
-}
+
 @media only screen and (max-width: 980px) {
   
   .header-container {
@@ -277,7 +275,7 @@ select {
     padding: 5%;
   }
   .main {
-    margin-top: calc(57vh + 22px);
+    margin-top: calc(57vh + 25px);
     position: relative;
     display: grid;
     grid-template-columns: 1fr;

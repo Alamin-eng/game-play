@@ -7,9 +7,10 @@ import "./App.css";
 export default function ResponsiveDropdown({
   selectPlatform,
   setSelectPlatform,
-  selectGenre,
+  selectGenre, 
   setSelectGenre,
 }) {
+  
   const [menuActive, setMenuActive] = useState(false);
 
   return (
