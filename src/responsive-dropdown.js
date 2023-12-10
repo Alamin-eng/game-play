@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { BsXSquare } from "react-icons/bs";
 import "./App.css";
 
 export default function ResponsiveDropdown({
@@ -17,7 +18,7 @@ export default function ResponsiveDropdown({
         className={`hamburger-menu ${menuActive ? "active" : ""}`}
         onClick={() => setMenuActive(!menuActive)}
       >
-        <HiOutlineMenuAlt3 />
+        {menuActive ? <BsXSquare className="menu-cross"/> : <HiOutlineMenuAlt3 className="menu-bar"/>}
       </div>
       <div className={`dropdown ${menuActive ? "active" : ""}`}>
         <a
