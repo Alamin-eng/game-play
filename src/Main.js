@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FaWindows } from "react-icons/fa";
 import { IoBrowsers } from "react-icons/io5";
-import { BsBoxArrowInRight } from "react-icons/bs";
+import { BiSolidJoystickAlt } from "react-icons/bi";
+import { BiSolidJoystick } from "react-icons/bi";
 
 export default function Main({ props, selectPlatform, selectGenre }) {
   //get profile url by freetogame_profile_url
@@ -119,9 +120,7 @@ export default function Main({ props, selectPlatform, selectGenre }) {
                     target="_blank"
                     rel="noopener noreferrer" // NOTICE rel VALUES SET FOR SECURITY REASON
                     onClick={() => handleFetchUrl(el.game_url)}
-                  >
-                    PLAY <BsBoxArrowInRight/>
-                  </a>
+                  >PLAY</a>
                 </div>
               </div>
             </div>
