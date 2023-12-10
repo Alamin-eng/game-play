@@ -29,14 +29,14 @@
 }
 /* dropdown */
 .home {
-  gap: 10px;
+  gap: 5px;
 }
 .home:hover {
   color: white;
 }
 .dropdown {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   font-size: small;
   font-weight: bolder;
 }
@@ -54,15 +54,16 @@
 option {
   background-color: var(--color1);
   text-align: center;
+  
 }
 select {
   background-color: transparent;
   color: rgb(168, 2, 138);
   outline: none;
   border-radius: 8px;
-  margin-left: calc(8px + 2px);
+  margin-left: calc(3px + 2px);
   padding: 1px;
-  width: 90px;
+  width: min-content;
   font-weight: bold;
 }
 /* video clips carousel */
@@ -276,7 +277,7 @@ select {
     padding: 5%;
   }
   .main {
-    margin-top: calc(57vh + 20px);
+    margin-top: calc(57vh + 22px);
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
@@ -302,8 +303,8 @@ select {
     position: absolute;
     top: calc(25px + 3px);
     right: 10px;
-    font-size: 24px;
-    font-weight: bolder;
+    font-size: calc( 30px + 1px);
+    
     transition: 0.5s;
     width: 50px;
     height: 40px;
