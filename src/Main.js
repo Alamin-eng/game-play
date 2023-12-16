@@ -120,7 +120,9 @@ export default function Main({ props, selectPlatform, selectGenre }) {
                     target="_blank"
                     rel="noopener noreferrer" // NOTICE rel VALUES SET FOR SECURITY REASON
                     onClick={() => handleFetchUrl(el.game_url)}
-                  >PLAY</a>
+                  >
+                    PLAY 🎮
+                  </a>
                 </div>
               </div>
             </div>

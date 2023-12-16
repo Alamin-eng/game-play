@@ -7,6 +7,7 @@ import Carousel from "react-bootstrap/Carousel";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import ResponsiveDropdown from './responsive-dropdown';
+import Footer from './footer';
 
 function App() {
   const video = require("./v2.webm");
@@ -72,6 +73,7 @@ function App() {
       </Carousel>
 
       <Main props={staticData} selectPlatform={selectPlatform} selectGenre={selectGenre}/>
+      <Footer />
     </div>
   );
 }
