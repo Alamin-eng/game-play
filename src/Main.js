@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { FaWindows } from "react-icons/fa";
 import { IoBrowsers } from "react-icons/io5";
-import { BiSolidJoystickAlt } from "react-icons/bi";
-import { BiSolidJoystick } from "react-icons/bi";
 
 export default function Main({ props, selectPlatform, selectGenre }) {
   //get profile url by freetogame_profile_url
