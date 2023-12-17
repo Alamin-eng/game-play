@@ -10,7 +10,7 @@ export default function SignInSignUp() {
       </div>
       <div className="sign-up">
         <div>Join Free</div>
-        <BsPersonPlusFill />
+        
       </div>
     </div>
   );

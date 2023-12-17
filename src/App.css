@@ -20,7 +20,7 @@
   width: 100%;
   z-index: 1;
   background-color: var(--background);
-  /* border-bottom: 0.01rem solid orange; */
+  border-bottom: 0.01rem solid rgb(0, 42, 132);
 }
 .header-span {
   font-family: "Exo 2", sans-serif;
@@ -66,7 +66,7 @@ select {
   outline: none;
   border-radius: 8px;
   margin-left: calc(3px + 2px);
-  padding: 1px;
+  padding: calc(1px + 1px);
   width: min-content;
   font-weight: bold;
 }
@@ -282,11 +282,12 @@ select {
 
 /* login signup */
 .login-signup {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: calc(6px + 2px);
+  gap: calc(10px + 2px);
 }
 .log-in,
 .sign-up {
@@ -294,11 +295,11 @@ select {
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 4%;
+  padding: 2%;
   width: calc(90px + 2px);
   background-color: rgb(0, 53, 68);
   cursor: pointer;
-  gap: calc(7px + 1px);
+  gap: calc(7px + 2px);
   border-radius: 6px;
   font-size: small;
 }
@@ -317,9 +318,9 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 75px;
+  height: 85px;
   background-color: rgb(0, 0, 0);
-  padding: 5%;
+  padding: 3%;
   font-size: smaller;
 }
 
