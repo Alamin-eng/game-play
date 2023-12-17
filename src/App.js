@@ -7,6 +7,7 @@ import Carousel from "react-bootstrap/Carousel";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import ResponsiveDropdown from './responsive-dropdown';
+import SignInSignUp from "./sign-in-sing-up";
 import Footer from './footer';
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           selectGenre={selectGenre}
           setSelectGenre={handleSelectGenre}
         />
+        <SignInSignUp />
       </div>
       <Carousel className="caro">
         <Carousel.Item interval={7000}>

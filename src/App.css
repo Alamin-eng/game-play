@@ -4,21 +4,23 @@
   --color2: rgb(0, 70, 62);
   --card-border: rgb(81, 68, 64);
   --span: rgb(139, 139, 139);
-  --background: rgb(34, 32, 32, 0.8);
+  --background: rgb(34, 32, 32, .9);
   --header-main-color: rgb(168, 2, 138);
 }
 
 .header-container {
   display: grid;
-  grid-template-columns: 0.75fr 1.5fr;
+  grid-template-columns: 0.75fr 1.25fr 0.5fr;
+  grid-template-rows: 9vh;
   justify-content: center;
   align-items: center;
-  padding: calc(10px - 3px) 4%;
+  padding: calc(10px - 2px) 4%;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
   background-color: var(--background);
+  /* border-bottom: 0.01rem solid orange; */
 }
 .header-span {
   font-family: "Exo 2", sans-serif;
@@ -32,6 +34,7 @@
 .home {
   gap: 5px;
 }
+
 .home:hover {
   color: white;
 }
@@ -67,17 +70,26 @@ select {
   width: min-content;
   font-weight: bold;
 }
+.no-social-media {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+}
 /* video clips carousel */
 .carousel {
   position: absolute;
-  top: 7%;
+  top: 8%;
   left: 0;
   padding-top: 4%;
   border-radius: 50%;
 }
 .logo {
   height: auto;
-  width: calc(4rem - .5rem);
+  width: calc(4rem - 0.5rem);
 }
 .carousel-item > video {
   width: 97vw;
@@ -89,7 +101,7 @@ select {
   content: "";
   display: block;
   position: absolute;
-  top: 5%;
+  top: 5.5%;
   left: 0;
   width: 100%;
   height: calc(93% + 4%);
@@ -236,9 +248,9 @@ select {
 .main-play:hover:before {
   opacity: 1;
 }
-.main-play:hover{
+.main-play:hover {
   background-color: rgba(34, 34, 37, 0.92);
-  transition: .3 ease-out;
+  transition: 0.3 ease-out;
 }
 .main-play:hover:active:before {
   filter: blur(3px);
@@ -268,24 +280,59 @@ select {
   display: none;
 }
 
-/* footer */
-.footer{
+/* login signup */
+.login-signup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: calc(6px + 2px);
+}
+.log-in,
+.sign-up {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: auto;
+  padding: 4%;
+  width: calc(90px + 2px);
+  background-color: rgb(0, 53, 68);
+  cursor: pointer;
+  gap: calc(7px + 1px);
+  border-radius: 6px;
+  font-size: small;
+}
+
+.sign-up {
+  background-color: transparent;
+  border: 1px solid rgb(0, 142, 189);
+}
+.log-in:hover,
+.sign-up:hover {
+  background-color: rgba(36, 71, 83, 0.7);
+}
+/* footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
   background-color: rgb(0, 0, 0);
+  padding: 5%;
+  font-size: smaller;
 }
 
 @media only screen and (max-width: 980px) {
-  
   .header-container {
     display: grid;
     grid-template-columns: 1.75fr 0.25fr;
-    padding: 5%;
+    padding: 4.5%;
+    gap: 10%;
   }
+
   .main {
-    margin-top: calc(57vh + 25px);
+    margin-top: calc(57vh + 30px);
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
@@ -299,11 +346,11 @@ select {
     background-color: rgba(46, 46, 46, 0.5);
     margin: 10px 0;
     position: relative;
-    
   }
-.platform>label, .genre>label{
-  color: white;
-}
+  .platform > label,
+  .genre > label {
+    color: white;
+  }
   /* responsive dropdown */
   .hamburger-menu {
     display: block;
@@ -311,7 +358,7 @@ select {
     position: absolute;
     top: calc(25px + 3px);
     right: 10px;
-    font-size: calc( 30px + 1px);
+    font-size: calc(30px + 1px);
     width: 50px;
     height: 40px;
     color: var(--color1);
@@ -320,13 +367,14 @@ select {
   .home {
     background-color: var(--background);
     width: 100%;
-    height: 5vh;
+    height: 10vh;
+    margin-top: 10%;
   }
   /* Dropdown Styles */
   .dropdown {
     display: none;
     position: absolute;
-    top: 80px;
+    top: calc(70px + 4px);
     right: 1px;
     background-color: rgba(1, 57, 87, 0.9);
     width: 100%;
@@ -336,27 +384,41 @@ select {
   /* notice how .dropdown.active class used to display .dropdown style above in @media rules */
   .dropdown.active {
     display: block;
-    padding: 30px;
+    padding: 10px;
   }
   .dropdown label,
   .dropdown select {
     display: block;
-    margin: calc(13px + 2px);
+    margin: calc(20px + 2px);
+  }
+  .social-media {
+    height: 100px;
+    display: flex;
   }
   .carousel-control-next,
   .carousel-control-prev {
     display: none;
   }
-  .carousel-indicators{
+  .carousel-indicators {
     display: none;
   }
   /* carousel  */
   .carousel {
-  top: 1%;
+    top: 3%;
   }
   .carousel::after {
-    top: 20%;
+    top: 22%;
     height: 59%;
   }
-
+  /* login-signup */
+  .login-signup {
+    margin-top: 1%;
+    font-size: small;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 25px;
+  }
 }

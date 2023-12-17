@@ -3,6 +3,9 @@ import { FaHome } from "react-icons/fa";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { BsXSquare } from "react-icons/bs";
 import "./App.css";
+import { FaSquareGithub } from "react-icons/fa6";
+import { SiMinutemailer } from "react-icons/si";
+import { FaSquareFacebook } from "react-icons/fa6";
 
 export default function ResponsiveDropdown({
   selectPlatform,
@@ -19,7 +22,11 @@ export default function ResponsiveDropdown({
         className={`hamburger-menu ${menuActive ? "active" : ""}`}
         onClick={() => setMenuActive(!menuActive)}
       >
-        {menuActive ? <BsXSquare className="menu-cross"/> : <HiOutlineMenuAlt3 className="menu-bar"/>}
+        {menuActive ? (
+          <BsXSquare className="menu-cross" />
+        ) : (
+          <HiOutlineMenuAlt3 className="menu-bar" />
+        )}
       </div>
       <div className={`dropdown ${menuActive ? "active" : ""}`}>
         <a
@@ -60,6 +67,12 @@ export default function ResponsiveDropdown({
             <option value="PC (Windows)">PC (Windows) </option>
             <option value="Web Browser">Web Browser</option>
           </select>
+        </div>
+
+        <div className={menuActive ? "social-media" : "no-social-media"}>
+          <FaSquareGithub style={{ fontSize: "1.2rem" }} />
+          <FaSquareFacebook style={{ fontSize: "1.2rem" }} />
+          <SiMinutemailer style={{ fontSize: "1.2rem" }} />
         </div>
       </div>
     </div>
