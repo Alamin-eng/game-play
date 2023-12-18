@@ -3,7 +3,7 @@ import { FaHome } from "react-icons/fa";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { BsXSquare } from "react-icons/bs";
 import "./App.css";
-
+import PopularPlatforms from "./popular-platforms";
 import SignInSignUp from "./sign-in-sing-up";
 
 export default function ResponsiveDropdown({
@@ -68,7 +68,7 @@ export default function ResponsiveDropdown({
         </div>
 
         <SignInSignUp />
-  
+        <PopularPlatforms />
         
       </div>
     </div>

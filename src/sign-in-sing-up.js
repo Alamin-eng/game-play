@@ -4,7 +4,7 @@ export default function SignInSignUp() {
   return (
     <div className="login-signup">
       <div className="log-in">
-        <div>Log In</div>
+        <div>Login</div>
         <BsPersonCircle />
       </div>
       <div className="sign-up">
