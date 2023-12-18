@@ -3,17 +3,15 @@ import { FaHome } from "react-icons/fa";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { BsXSquare } from "react-icons/bs";
 import "./App.css";
-import { FaSquareGithub } from "react-icons/fa6";
-import { SiMinutemailer } from "react-icons/si";
-import { FaSquareFacebook } from "react-icons/fa6";
+
+import SignInSignUp from "./sign-in-sing-up";
 
 export default function ResponsiveDropdown({
   selectPlatform,
   setSelectPlatform,
-  selectGenre, 
+  selectGenre,
   setSelectGenre,
 }) {
-  
   const [menuActive, setMenuActive] = useState(false);
 
   return (
@@ -69,11 +67,9 @@ export default function ResponsiveDropdown({
           </select>
         </div>
 
-        <div className={menuActive ? "social-media" : "no-social-media"}>
-          <FaSquareGithub style={{ fontSize: "1.2rem" }} />
-          <FaSquareFacebook style={{ fontSize: "1.2rem" }} />
-          <SiMinutemailer style={{ fontSize: "1.2rem" }} />
-        </div>
+        <SignInSignUp />
+  
+        
       </div>
     </div>
   );
