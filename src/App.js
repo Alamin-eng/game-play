@@ -13,9 +13,9 @@ function App() {
   const video = require("./v2.webm");
   const video1 = require("./v3.mp4");
   const video2 = require("./v4.mp4");
-  const staticData = require("./staticData.json")
+  const staticData = require("./staticData.json");
 
-  // // fetch data by api call 
+  // // fetch data by api call
   // const [data, setData] = useState([])
   //   useEffect(() => {
   //     try{
@@ -28,21 +28,22 @@ function App() {
   //     }
   //   },[data]);
 
-    
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
 
-   const [selectPlatform, setSelectPlatform] = useState("Platform");
-   const [selectGenre, setSelectGenre] = useState("Genre");
-   
-   function handleSelectPlatform(e) {
-     setSelectPlatform(e.target.value);
-   }
-   
-   function handleSelectGenre(e) {
-     setSelectGenre(e.target.value);
-   }
+  const [selectPlatform, setSelectPlatform] = useState("Platform");
+  const [selectGenre, setSelectGenre] = useState("Genre");
+
+
+  function handleSelectPlatform(e) {
+    setSelectPlatform(e.target.value);
+  }
+
+  function handleSelectGenre(e) {
+    setSelectGenre(e.target.value);
+  }
+
   return (
     <div>
       <div className="header-container">
@@ -72,7 +73,14 @@ function App() {
         </Carousel.Item>
       </Carousel>
 
-      <Main props={staticData} selectPlatform={selectPlatform} selectGenre={selectGenre}/>
+      <Main
+        props={staticData}
+        selectPlatform={selectPlatform}
+        selectGenre={selectGenre}
+      />
+
+      
+      
       <Footer />
     </div>
   );

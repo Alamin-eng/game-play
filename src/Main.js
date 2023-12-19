@@ -6,6 +6,14 @@ export default function Main({ props, selectPlatform, selectGenre }) {
   //get profile url by freetogame_profile_url
   const [url, setUrls] = useState("");
 
+  const dataManupulation = props
+    .filter(
+      (item) =>
+        selectPlatform === "Platform" || selectPlatform === item.platform
+    )
+    .filter((item) => selectGenre === "Genre" || selectGenre === item.genre);
+  
+
   function handleFetchUrl(getUrl) {
     setUrls(getUrl);
     console.log(getUrl);
@@ -34,15 +42,11 @@ export default function Main({ props, selectPlatform, selectGenre }) {
   //   setId(getId);
   //   console.log(getId);
   // }
-  
-  const dataManupulation = props
-  .filter((item) => selectPlatform === "Platform" || selectPlatform === item.platform)
-  .filter((item) => selectGenre === "Genre" || selectGenre === item.genre)
 
-  
+
+
   return (
     <div className="main">
-      
       {dataManupulation.map((el, index) => {
         return (
           <div className="main-card" key={index}>
@@ -127,6 +131,7 @@ export default function Main({ props, selectPlatform, selectGenre }) {
           </div>
         );
       })}
+
     </div>
   );
 }
