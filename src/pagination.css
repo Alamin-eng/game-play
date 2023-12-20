@@ -1,0 +1,17 @@
+/* pagination */
+.pagination{
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+  width: 100% ;
+}
+.pagination span{
+  background-color: #003584;
+  display: flex;
+  margin: 5px;
+  width: calc(1.4rem + .1rem);
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 2px;
+}

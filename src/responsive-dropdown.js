@@ -5,6 +5,7 @@ import { BsXSquare } from "react-icons/bs";
 import "./App.css";
 import PopularPlatforms from "./popular-platforms";
 import SignInSignUp from "./sign-in-sing-up";
+import { Link } from "react-router-dom";
 
 export default function ResponsiveDropdown({
   selectPlatform,
@@ -27,15 +28,18 @@ export default function ResponsiveDropdown({
         )}
       </div>
       <div className={`dropdown ${menuActive ? "active" : ""}`}>
-        <a
-          className="home"
-          href="https://game-play-mohammad-alamin.netlify.app/"
-          style={{ textDecoration: "none" }}
-          onClick={() => setMenuActive(false)}
-        >
-          <FaHome style={{ color: "white", textDecoration: "none" }} />
-          <span>Home</span>
-        </a>
+        
+          <Link
+            to="/"
+            className="home"
+            style={{ textDecoration: "none" }}
+            onClick={() => setMenuActive(false)}
+          >
+            <FaHome style={{ color: "white", textDecoration: "none" }} />
+            <span>Home</span>
+          </Link>
+        
+
         <div className="genre">
           <label>Genre</label>
           <select onChange={(e) => setSelectGenre(e)} value={selectGenre}>
@@ -69,7 +73,6 @@ export default function ResponsiveDropdown({
 
         <SignInSignUp />
         <PopularPlatforms />
-        
       </div>
     </div>
   );

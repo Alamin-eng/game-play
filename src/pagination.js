@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./pagination.css";
 
 export default function Pagination({props, selectPlatform, selectGenre}){
 //  pagination
@@ -31,3 +32,4 @@ export default function Pagination({props, selectPlatform, selectGenre}){
       </div>
     );
 }
+
