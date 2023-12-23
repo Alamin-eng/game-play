@@ -7,6 +7,11 @@
   --background: rgb(34, 32, 32, .9);
   --header-main-color: rgb(168, 2, 138);
 }
+.App-header:hover{
+  filter: invert(15%);
+  filter: brightness(130%);
+  transition: .3s ease-out;
+}
 
 .header-container {
   display: grid;
@@ -21,6 +26,7 @@
   z-index: 1;
   background-color: var(--background);
   border-bottom: 0.01rem solid rgb(0, 42, 132);
+  filter: contrast(120%);
 }
 .header-span {
   font-family: "Exo 2", sans-serif;

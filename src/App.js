@@ -64,7 +64,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className="app">
         <div className="header-container">
           <Header />
           <ResponsiveDropdown

@@ -10,7 +10,9 @@ body {
   letter-spacing:.03rem;
   font-size: .9rem;
 }
-
+html{
+  filter: brightness(104%);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
