@@ -65,7 +65,7 @@ export default function ResponsiveDropdown({
         <div className="platform">
           <label>Platform</label>
           <select onChange={(e) => setSelectPlatform(e)} value={selectPlatform}>
-            <option value="Platform">All platform</option>
+            <option value="Platform">All platforms</option>
             <option value="PC (Windows)">PC (Windows) </option>
             <option value="Web Browser">Web Browser</option>
           </select>

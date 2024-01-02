@@ -65,7 +65,7 @@
   color: var(--span);
 }
 option {
-  background-color: rgb(16, 0, 86);
+  background-color: rgb(11, 0, 62);
   text-align: center;
 }
 
@@ -73,7 +73,8 @@ select {
   background-color: transparent;
   color: rgb(134, 164, 210);
   outline: none;
-  border-radius: 6px;
+  border: none;
+  border-radius: 5px;
   margin-left: calc(3px + 1px);
   padding: calc(2px + 1px);
   width: min-content;
@@ -295,8 +296,10 @@ select {
   }
   .platform > label,
   .genre > label {
-    color: white;
+    color: goldenrod;
+    font-weight: bolder;
   }
+  
   /* responsive dropdown */
   .hamburger-menu {
     display: block;
