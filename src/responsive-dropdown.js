@@ -43,7 +43,7 @@ export default function ResponsiveDropdown({
         <div className="genre">
           <label>Genre</label>
           <select onChange={(e) => setSelectGenre(e)} value={selectGenre}>
-            <option value="Genre">Browse Games</option>
+            <option value="Genre">All Games</option>
             <option value="MMOARPG">MMOARPG</option>
             <option value="Shooter">Shooter</option>
             <option value="ARPG">ARPG</option>
