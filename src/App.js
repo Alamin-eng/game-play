@@ -12,7 +12,7 @@ import Footer from "./footer";
 //Signup page
 import SignupPage from "./SignupPage";
 //pagination
-
+import Pagination from "./pagination";
 
 function App() {
   const video = require("./v2.webm");
@@ -40,26 +40,33 @@ function App() {
   const [selectPlatform, setSelectPlatform] = useState("Platform");
   const [selectGenre, setSelectGenre] = useState("Genre");
 
-  //Pagination
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [recordsPerPage] = useState(16);
+  // Pagination
+const [currentPage, setCurrentPage] = useState(1);
 
-  // const indexOfLastRecord = currentPage * recordsPerPage;
-  // const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
-  // const currentRecords = staticData.slice(
-  //   indexOfFirstRecord,
-  //   indexOfLastRecord
-  // );
-  // const nPages = Math.ceil(staticData.length / recordsPerPage);
+const itemsPerPage = 12;
+const indexOfLastItem = currentPage * itemsPerPage;
+
+const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+const filteredData = staticData
+  .filter(
+    (item) => selectPlatform === "Platform" || selectPlatform === item.platform
+  )
+  .filter((item) => selectGenre === "Genre" || selectGenre === item.genre);
+
+const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   //
-
   function handleSelectPlatform(e) {
     setSelectPlatform(e.target.value);
+    setCurrentPage(1); // this line related to pagination 
   }
 
   function handleSelectGenre(e) {
     setSelectGenre(e.target.value);
+    setCurrentPage(1); // this line related to pagination
   }
 
   return (
@@ -99,15 +106,20 @@ function App() {
                 </Carousel>
 
                 <Main
-                  props={staticData}
+                  props={currentItems}
                   selectPlatform={selectPlatform}
                   selectGenre={selectGenre}
                 />
-
+                <Pagination
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  paginate={paginate}
+                />
                 <Footer />
               </div>
-            }/>
-            
+            }
+          />
+
           <Route path="/SignupPage" element={<SignupPage />} />
         </Routes>
       </div>

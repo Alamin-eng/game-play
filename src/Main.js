@@ -3,7 +3,9 @@ import { FaWindows } from "react-icons/fa";
 import { IoBrowsers } from "react-icons/io5";
 import "./main-play.css" // play button- css style only here. main.css needs cleanup
 
+
 export default function Main({ props, selectPlatform, selectGenre }) {
+  
   //get profile url by freetogame_profile_url
   const [url, setUrls] = useState("");
 
@@ -132,7 +134,7 @@ export default function Main({ props, selectPlatform, selectGenre }) {
           </div>
         );
       })}
-
+      
     </div>
   );
 }
