@@ -3,7 +3,7 @@
   --color1: rgb(0, 177, 168);
   --color2: rgb(0, 70, 62);
   --card-border: rgb(81, 68, 64);
-  --span: rgb(139, 139, 139);
+  --span: rgb(146, 146, 146);
   --background: rgb(34, 32, 32, .9);
   --header-main-color: rgb(168, 2, 138);
 }
@@ -54,8 +54,8 @@
   font-weight: bolder;
 }
 
-.platform > label,
-.genre > label,
+.platform ,
+.genre ,
 .home {
   display: inline-flex;
   justify-content: center;
@@ -67,11 +67,12 @@
 option {
   background-color: rgb(11, 0, 62);
   text-align: center;
+  
 }
 
 select {
   background-color: transparent;
-  color: rgb(134, 164, 210);
+  color: var(--span);
   outline: none;
   border: none;
   border-radius: 5px;
@@ -79,6 +80,7 @@ select {
   padding: calc(2px + 1px);
   width: min-content;
   font-weight: bold;
+  
 }
 
 /* video clips carousel */

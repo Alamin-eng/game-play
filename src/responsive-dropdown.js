@@ -41,9 +41,9 @@ export default function ResponsiveDropdown({
         
 
         <div className="genre">
-          <label>Genre</label>
+          
           <select onChange={(e) => setSelectGenre(e)} value={selectGenre}>
-            <option value="Genre">All Games</option>
+            <option value="Genre">All Genre</option>
             <option value="MMOARPG">MMOARPG</option>
             <option value="Shooter">Shooter</option>
             <option value="ARPG">ARPG</option>
@@ -63,7 +63,7 @@ export default function ResponsiveDropdown({
           </select>
         </div>
         <div className="platform">
-          <label>Platform</label>
+          
           <select onChange={(e) => setSelectPlatform(e)} value={selectPlatform}>
             <option value="Platform">All platforms</option>
             <option value="PC (Windows)">PC (Windows) </option>
