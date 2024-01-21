@@ -4,11 +4,20 @@ export default function SignInSignUp() {
    
   return (
     <div className="login-signup">
-      <div className="log-in">
-        <div>Login</div>
-        <BsPersonCircle />
-      </div>
-      <Link to="/SignupPage" className="sign-up" style={{textDecoration:"none"}}>
+      <Link
+        to="/SignupPage"
+        className="log-in"
+        style={{ textDecoration: "none" }}
+      >
+          <div>Login</div>
+          <BsPersonCircle />
+
+      </Link>
+      <Link
+        to="/SignupPage"
+        className="sign-up"
+        style={{ textDecoration: "none" }}
+      >
         <div>Join Free</div>
       </Link>
     </div>
