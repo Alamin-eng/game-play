@@ -25,7 +25,6 @@
   width: 100%;
   z-index: 1;
   background-color: var(--background);
-  border-bottom: 0.01rem solid rgb(0, 42, 132);
   filter: contrast(120%);
 }
 .header-span {

@@ -80,6 +80,7 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber);
             selectGenre={selectGenre}
             setSelectGenre={handleSelectGenre}
           />
+          
         </div>
 
         <Routes>
