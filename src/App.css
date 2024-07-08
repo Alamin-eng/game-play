@@ -127,7 +127,7 @@ select {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: calc(4px + 2px);
+  gap: calc(5px + 2px);
   padding: 1%;
 }
 
@@ -137,9 +137,9 @@ select {
   border-radius: 4px 4px 0 0;
 }
 .main-card {
-  border: 1px solid rgb(117, 117, 117);
-  border-radius: 5px;
-  
+  box-shadow: -1px -1px 9px 1px rgb(87, 126, 177) inset;
+  border-radius: 6px;
+  background-color: rgb(24, 24, 24);
 }
 
 .card-body {
