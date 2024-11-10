@@ -1,4 +1,4 @@
-import { BsPersonCircle } from "react-icons/bs";
+import { BsPersonCircle, BsPlusCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 export default function SignInSignUp() {
    
@@ -10,7 +10,7 @@ export default function SignInSignUp() {
         style={{ textDecoration: "none" }}
       >
           <div>Login</div>
-          <BsPersonCircle />
+          <BsPersonCircle color="violet"/>
 
       </Link>
       <Link
@@ -19,6 +19,7 @@ export default function SignInSignUp() {
         style={{ textDecoration: "none" }}
       >
         <div>Join Free</div>
+        <BsPlusCircle color="violet"/>
       </Link>
     </div>
   );
