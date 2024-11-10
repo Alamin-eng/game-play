@@ -9,7 +9,7 @@ export default function SignInSignUp() {
         className="log-in"
         style={{ textDecoration: "none" }}
       >
-          <div>Login</div>
+          <div>LOGIN</div>
           <BsPersonCircle color="violet"/>
 
       </Link>
@@ -18,7 +18,7 @@ export default function SignInSignUp() {
         className="sign-up"
         style={{ textDecoration: "none" }}
       >
-        <div>Join Free</div>
+        <div>JOIN</div>
         <BsPlusCircle color="violet"/>
       </Link>
     </div>
