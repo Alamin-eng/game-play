@@ -24,25 +24,6 @@ Enhance my skills in consuming APIs and handling asynchronous data.
 
 Design a fully responsive and visually appealing UI using CSS.
 
-### Installation and Setup
-Clone the repository:
-
-git clone https://github.com/Alamin-eng/game-play  
-
-Navigate to the project directory:  
-
-cd game-play  
-
-Install dependencies:  
-
-npm install  
-
-Run the application:  
-
-npm start  
-
-The app will be live at http://localhost:3000.
-
 ### Future Enhancements
 Implement user accounts for saving favorite games.  
 
@@ -55,3 +36,12 @@ If you have any feedback or questions, feel free to connect with me:
 Email: mohammedalaminruben@gmail.com  
 
 LinkedIn: https://www.linkedin.com/in/mohammad-a-846376220/
+
+## Getting Started
+
+```bash
+$ git clone ...       # clone this project to your local machine
+$ cd game-play        # go to project folder
+$ npm install         # install dependencies
+$ npm run start       # run it locally
+```
