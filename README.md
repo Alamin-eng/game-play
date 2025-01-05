@@ -1,4 +1,4 @@
-# Game Explorer
+# Game Play
 A React-based web application that allows users to discover and play free games by genre. This project demonstrates my ability to use advanced React Hooks and create responsive, user-friendly interfaces.
 
 ### Features
