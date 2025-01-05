@@ -31,7 +31,8 @@ git clone https://github.com/Alamin-eng/game-play
 
 Navigate to the project directory:  
 
-cd game-play 
+cd game-play  
+
 Install dependencies:  
 
 npm install  
