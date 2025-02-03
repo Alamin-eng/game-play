@@ -15,7 +15,7 @@ import SignupPage from "./SignupPage";
 import Pagination from "./pagination";
 
 function App() {
-  const video = require("./v2.webm");
+  const video = require("./v2.mp4");
   const video1 = require("./v3.mp4");
   const video2 = require("./v4.mp4");
   const staticData = require("./staticData.json");
@@ -90,17 +90,17 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber);
               <div>
                 <Carousel className="caro">
                   <Carousel.Item interval={7000}>
-                    <video autoPlay loop muted className="caroitem">
-                      <source src={video} type="video/webm" />
+                    <video autoPlay loop playsInline muted className="caroitem">
+                      <source src={video} type="video/mp4" />
                     </video>
                   </Carousel.Item>
                   <Carousel.Item interval={6000}>
-                    <video autoPlay loop muted className="caroitem">
+                    <video autoPlay loop playsInline muted className="caroitem">
                       <source src={video1} type="video/mp4" />
                     </video>
                   </Carousel.Item>
                   <Carousel.Item interval={3000}>
-                    <video autoPlay loop muted className="caroitem">
+                    <video autoPlay loop playsInline muted className="caroitem">
                       <source src={video2} type="video/mp4" />
                     </video>
                   </Carousel.Item>
