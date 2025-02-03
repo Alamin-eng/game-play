@@ -39,4 +39,4 @@ export default function Dropdown({ selectPlatform, setSelectPlatform, selectGenr
   );
 }
 
-
+/* this Dropdown component is NOT USED in App.js, ResponsiveDropdown component is used instead */
